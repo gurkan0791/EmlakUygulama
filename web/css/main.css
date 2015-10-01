@@ -1,0 +1,159 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27.Ara.2014, 23:08:49
+    Author     : gurkan
+*/
+
+body {
+font-family: arial, sans-serif;
+font-size: 100%; /* best for all browser using em */
+padding:0; 
+margin:0;
+}
+
+*, html { line-height: 1.6em; }
+article img { width:auto; max-width:100%; height:auto; }
+
+.sidebar a, article a, header a, footer a { color: #C30; }
+header a { text-decoration: none; }
+
+#wrapper {
+    
+font-size: 0.8em; /* 13px from 100% global font-size */
+max-width: 1024px; /* standard 1024px wide */
+margin: 0 auto;
+}
+
+/* css for <header> */
+header {
+	padding: 1em 0;
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+header hgroup { width: 100%; font-weight:normal; }
+
+
+/* css for <nav> */
+nav {
+	display: block;
+	margin: 0 0 2em;
+	padding: 0px;
+	float: left;
+	width: 100%;
+	background-color: #181919;
+}
+nav ul ul {display: none;}
+nav ul li:hover > ul {display: block;}
+	
+nav ul {
+	padding: 0;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	z-index: 2;
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+nav ul:after {content: ""; clear: both; display: block;}
+
+nav ul li {float: left;}
+
+nav ul li:hover a {color: #fff;}
+
+nav ul li a {
+	display: block;
+	padding: 1em;
+	font-size: 1.125em;
+	color: #ccc;
+	text-decoration: none;
+	margin: 0px;
+	background-color: #000;
+	border-right: 1px solid #333;
+}
+nav ul li:last-of-type a {border-right: 1px solid transparent !important;}
+
+nav ul ul {
+	background: #5f6975;
+	border-radius: 0px;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	width: auto;
+	float: none;
+}
+nav ul li:hover {
+	background: #5f6975;
+	color: #FFF;
+}
+nav ul ul li a:hover {
+	background-color: #4b545f;
+}
+
+nav ul ul li {
+float: none;
+border-bottom: 1px solid #444240;
+position: relative;
+}
+
+nav ul ul li a {
+padding: 0.5em 1em;
+font-size: 1em;
+width:10em;
+color: #fff;
+}	
+
+
+nav ul ul ul {
+position: absolute; left: 100%; top:0;
+}
+
+
+// harita arama
+#mapAra {
+    width: 100%;
+}
+      
+
+
+/* css for <footer> */
+footer {
+	width: 98%;
+	float:left;
+	padding: 1%;
+	background-color: white;
+	margin-top: 2em;
+}
+footer .footer-left { width: 45%; float:left; text-align:left; }
+footer .footer-right { width: 45%; float:right; text-align:right; }
+
+/*1024px */
+@media only screen and (min-width:770px) and (max-width:1024px){
+/*body { background-color: red; } lets add some background color so we know which dimension we're in */
+#wrapper { width:96%;  }
+section.content, aside.sidebar { width:100%; }
+#map_canvas {width :100%}
+}
+/* ipad 768px */
+@media only screen and (min-width:470px) and (max-width:770px){
+/*body { background-color: red; } lets add some background color so we know which dimension we're in */
+#wrapper { width:96%; font-size: 0.6875em; }
+section.content, aside.sidebar { width:100%; }
+
+#map_canvas {width :100%;}
+#panel {left: 80%; top: 50px; margin-left: -100px;}
+}
+
+/* iphone 468px */
+@media only screen and (min-width:270px) and (max-width:470px){
+/*body { background-color: yellow; } lets add some background color so we know which dimension we're in */
+#wrapper { width:96%; font-size: 0.6875em; }
+section.content, aside.sidebar { width:100%; }
+#map_canvas {width :100%;}
+#panel {left: 80%; top: 50px;}
+}
